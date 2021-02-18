@@ -2,17 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="//connect.soundcloud.com/sdk.js"></script>
-    <script src="../soundcloudmusic/main.js"></script>
-    <script src="../soundcloudmusic/jquery-3.3.1.js"></script>
-    <script src="../soundcloudmusic/jquery-3.3.1.min.js"></script>
+    <title>Sound cloud music player</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+    <script src="../soundcloudmusic/sdk.js"></script>
+
+
 </head>
 <body>
-    <button id="start">start</button>
+    <script>
+       SC.initialize({client_id: '340f063c670272fac27cfa67bffcafc4'});
+
+$(document).ready(function() { 
+    SC.stream("/tracks/191214159",function(sound){
+        $('#start').click(function(e) {
+            e.preventDefault();
+            sound.start();
+          });
+
+          $('#stop').click(function(e) {
+            e.preventDefault();
+            sound.stop();
+          });  
+     });  
+ });
+    </script>
+    <button id="start"src="/tracks/191214159">start</button>
     <button id="stop">stop</button>
     
+
+
+<br>
+
+<!--<iframe src="/tracks/191214159"></iframe>-->
+
 </body>
 </html>
