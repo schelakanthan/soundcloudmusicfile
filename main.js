@@ -109,7 +109,7 @@ $(document).ready(function() {
 
  $(document).ready(function() { 
     
-  SC.stream('/playlists/236267079',function(sound){
+  SC.stream('/tracks/321996333',function(sound){
         $('#start7').click(function(e) {
             e.preventDefault();
             sound.start();
