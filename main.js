@@ -109,7 +109,7 @@ $(document).ready(function() {
 
  $(document).ready(function() { 
     
-  SC.stream('/tracks/321996333',function(sound){
+  SC.stream('/tracks/164726329',function(sound){
         $('#start7').click(function(e) {
             e.preventDefault();
             sound.start();
@@ -169,7 +169,7 @@ $(document).ready(function() {
 
  $(document).ready(function() { 
     
-  SC.stream('/tracks/319583561',function(sound){
+  SC.stream('/tracks/161255934',function(sound){
         $('#start11').click(function(e) {
             e.preventDefault();
             sound.start();
