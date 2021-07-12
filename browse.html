@@ -1,0 +1,365 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>My music player</title>
+    <script src="//connect.soundcloud.com/sdk.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Mosaic Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.css" type='text/css' />
+<!-- //lined-icons -->
+ <!-- Meters graphs -->
+<script src="js/jquery-2.1.4.js"></script>
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+
+</head> 
+    	 <!-- /w3layouts-agile -->
+ <body class="sticky-header left-side-collapsed"  onload="initMap()">
+	<header id="site-header" class="w3l-header-4 fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1> <a class="navbar-brand" href="index.html">
+                        Photo<span class="sub-spl">f</span>lash
+                    </a></h1>
+                <!-- if logo is image enable this   
+        <a class="navbar-brand" href="#index.html">
+            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+        </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                    </span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                      
+                     
+                        <li class="nav-item">
+                            <a class="nav-link" href="browse.html">Album</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav search-right mt-lg-0 mt-2">
+                        <li class="nav-item mr-3" title="Search"><a href="#search" class="btn search-search">
+                                <span class="fa fa-search" aria-hidden="true"></span></a></li>
+                        <li class="nav-item"><a href="#download"
+                                class="btn btn-primary d-none d-lg-block btn-style">Download</a>
+                        </li>
+                    </ul>
+
+                    <!-- //toggle switch for light and dark theme -->
+                    <!-- search popup -->
+                    <div id="search" class="pop-overlay">
+                        <div class="popup">
+                            <form action="#" method="GET" class="d-sm-flex">
+                                <input type="search" placeholder="Search.." name="search" required="required" autofocus>
+                                <button type="submit">Search</button>
+                                <a class="close" href="#url">&times;</a>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /search popup -->
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+	<br><br>
+</br></br>
+			<div id="page-wrapper">
+				<div class="inner-content">
+				      <div class="music-browse">
+					<!--albums-->
+					<!-- pop-up-box --> 
+							<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all">
+							<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+							 <script>
+									$(document).ready(function() {
+									$('.popup-with-zoom-anim').magnificPopup({
+										type: 'inline',
+										fixedContentPos: false,
+										fixedBgPos: true,
+										overflowY: 'auto',
+										closeBtnInside: true,
+										preloader: false,
+										midClick: true,
+										removalDelay: 300,
+										mainClass: 'my-mfp-zoom-in'
+									});
+									});
+							</script>		
+					<!--//pop-up-box -->
+					
+						<div class="browse">
+								<div class="tittle-head two">
+									<h3 class="tittle">New Releses <span class="new">New</span></h3>
+									<a href="browse.html"><h4 class="tittle third">See all</h4></a>
+									<div class="clearfix"> </div>
+								</div>
+								
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<!-- <button class="btn" id="start8"><i class="glyphicon glyphicon-play-circle"></i></button> -->
+								<audio class="btn" id="start8" controls="controls"></audio>	
+								</div>
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid ">
+									<img src="images/v11.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+											<div class="clearfix"> </div>
+									</div>
+					<!--//End-albums-->
+					
+					<div class="browse">
+								<div class="col-md-3 browse-grid">
+									<a  href="single.html"><img src="images/v10.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+							<div class="col-md-3 browse-grid">
+									<a  href="single.html"><img src="images/v9.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+							<div class="col-md-3 browse-grid">
+								<a  href="single.html"><img src="images/v77.jpg" title="allbum-name"></a>
+								<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+							<div class="col-md-3 browse-grid">
+									<a  href="single.html"><img src="images/v88.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+							<div class="col-md-3 browse-grid">
+									<a  href="single.html"><img src="images/v1.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+							<div class="col-md-3 browse-grid">
+									<a  href="single.html"><img src="images/v99.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+							<div class="col-md-3 browse-grid">
+									<a  href="single.html"><img src="images/v6.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+							<div class="col-md-3 browse-grid">
+									<a  href="single.html"><img src="images/v66.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+							<div class="col-md-3 browse-grid">
+									<a  href="single.html"><img src="images/v6.jpeg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+							<div class="col-md-3 browse-grid">
+									<a  href="single.html"><img src="images/v21.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid">
+									<a  href="single.html"><img src="images/v3.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+								<div class="col-md-3 browse-grid">
+									<a  href="single.html"><img src="images/v4.jpg" title="allbum-name"></a>
+									<audio class="btn" id="start8" controls="controls"></audio>
+								</div>
+											<div class="clearfix"> </div>
+									</div>
+					<!--//End-albums-->
+						<!--//discover-view-->
+							<!--//music-left-->
+							</div>
+						
+			  <!--body wrapper end-->
+			<footer class="footer-28 py-5">
+				<div class="container py-lg-3">
+				
+					<div class="row footer-top-28">
+						<div class="col-lg-6 footer-list-28 pr-lg-5 mt-5">
+							<h6 class="footer-title-28">Contact information</h6>
+							<p class="pr-lg-5">Lorem ipsum dolor sit amet, consectetur elit. Nihil sit dicta, commodi maxime
+								provident quidem non, amet.</p>
+		
+							<div class="main-social-footer-28 mt-3">
+								<ul class="social-icons">
+									<li class="facebook">
+										<a href="#link" title="Facebook">
+											<span class="fa fa-facebook" aria-hidden="true"></span>
+										</a>
+									</li>
+									<li class="twitter">
+										<a href="#link" title="Twitter">
+											<span class="fa fa-twitter" aria-hidden="true"></span>
+										</a>
+									</li>
+									<li class="dribbble">
+										<a href="#link" title="Dribbble">
+											<span class="fa fa-dribbble" aria-hidden="true"></span>
+										</a>
+									</li>
+									<li class="google">
+										<a href="#link" title="Google">
+											<span class="fa fa-google" aria-hidden="true"></span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="row">
+								<div class="col-md-4 col-6 footer-list-28 mt-5">
+									<h6 class="footer-title-28">Useful links</h6>
+									<ul>
+										<li><a href="about.html">About us</a></li>
+										<li><a href="services.html">Services</a></li>
+										<li><a href="blog.html">Blog Posts</a></li>
+										<li><a href="#pricing">Pricing plans</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4 col-6 footer-list-28 mt-5">
+									<h6 class="footer-title-28">Page links</h6>
+									<ul>
+										<li><a href="#">Why</a></li>
+										<li><a href="about.html">About us</a></li>
+										<li><a href="about.html">Photographers</a></li>
+										<li><a href="#pricing">Pricing plans</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4 col-6 footer-list-28 mt-5">
+									<h6 class="footer-title-28">Help</h6>
+									<ul>
+										<li><a href="#privacy">Privacy policy</a></li>
+										<li><a href="#support"> Support</a></li>
+										<li><a href="#terms">Terms & conditions</a></li>
+										<li><a href="#license">License and uses</a></li>
+									</ul>
+								</div>
+		
+							</div>
+						</div>
+					</div>
+					<div class="midd-footer-28 align-center py-4 mt-5">
+						<p class="copy-footer-28 text-center"> &copy; Copyright 2021 Zujans-All rights reserved .</p>
+					</div>
+				</div>
+		
+		
+				<!-- move top -->
+				<button onclick="topFunction()" id="movetop" title="Go to top">
+					&#10548;
+				</button>
+		
+		
+			   
+				<script src="jquery-3.3.1.js"></script>
+			   <script src="jquery-3.3.1.min.js"></script> 
+			   <script src="main.js"></script>
+		
+				<script>
+					// When the user scrolls down 20px from the top of the document, show the button
+					window.onscroll = function () {
+						scrollFunction()
+					};
+		
+					function scrollFunction() {
+						if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+							document.getElementById("movetop").style.display = "block";
+						} else {
+							document.getElementById("movetop").style.display = "none";
+						}
+					}
+		
+					// When the user clicks on the button, scroll to the top of the document
+					function topFunction() {
+						document.body.scrollTop = 0;
+						document.documentElement.scrollTop = 0;
+					}
+				</script>
+				<!-- /move top -->
+				<!-- //footer-28 block -->
+		
+ 	 <!-- /wthree-agile -->
+      <!-- main content end-->
+			</footer>
+   	 <!-- /wthree-agile -->
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
